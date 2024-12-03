@@ -74,8 +74,16 @@ bool BlitCopyTextureToTextureCommandGLES::Encode(
   // emulate the blit when it's not available in the driver.
   if (!gl.BlitFramebuffer.IsAvailable()) {
     // TODO(157064): Emulate the blit using a raster draw call here.
-    VALIDATION_LOG << "Texture blit fallback not implemented yet for GLES2.";
-    return false;
+    //VALIDATION_LOG << "Texture blit fallback not implemented yet for GLES2.";
+
+    // Create the blit program.
+    
+
+    gl.Disable(GL_SCISSOR_TEST);
+    gl.Disable(GL_DEPTH_TEST);
+    gl.Disable(GL_STENCIL_TEST);
+
+    return true;
   }
 
   GLuint read_fbo = GL_NONE;

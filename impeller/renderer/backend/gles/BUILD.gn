@@ -40,6 +40,8 @@ impeller_component("gles") {
     "allocator_gles.h",
     "blit_command_gles.cc",
     "blit_command_gles.h",
+    "blit_emulator.cc",
+    "blit_emulator.h",
     "blit_pass_gles.cc",
     "blit_pass_gles.h",
     "buffer_bindings_gles.cc",
